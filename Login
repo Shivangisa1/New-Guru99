@@ -1,0 +1,27 @@
+package Gurupro;
+
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;  
+	import org.openqa.selenium.chrome.ChromeDriver;
+
+
+	public class Guru 
+	{
+
+		public static void main(String[] args)
+		{
+		WebDriver driver= new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+		driver.get("https://www.demo.guru99.com/V4/");
+		driver.findElement(By.name("uid")).sendKeys("mngr493900");  // password valid upto 8 may.
+		driver.findElement(By.name("password")).sendKeys("tYtazyb");
+		
+		driver.findElement(By.name("btnLogin")).click();
+		//driver.findElement(By.name("btnReset")).click();
+
+
+		}
+
+	}
+
+
